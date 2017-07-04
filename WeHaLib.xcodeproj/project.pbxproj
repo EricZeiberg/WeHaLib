@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA404D791F0B22B20085DA58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D781F0B22B20085DA58 /* main.m */; };
+		AA404D7C1F0B22B20085DA58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D7B1F0B22B20085DA58 /* AppDelegate.m */; };
+		AA404D7F1F0B22B20085DA58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D7E1F0B22B20085DA58 /* ViewController.m */; };
+		AA404D821F0B22B20085DA58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA404D801F0B22B20085DA58 /* Main.storyboard */; };
+		AA404D841F0B22B20085DA58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA404D831F0B22B20085DA58 /* Assets.xcassets */; };
+		AA404D901F0C43130085DA58 /* BookSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D8F1F0C43130085DA58 /* BookSearchTableViewController.m */; };
+		AA404D931F0C43A60085DA58 /* BookSearchTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D921F0C43A60085DA58 /* BookSearchTableCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA404D741F0B22B20085DA58 /* WeHaLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeHaLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA404D781F0B22B20085DA58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA404D7A1F0B22B20085DA58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AA404D7B1F0B22B20085DA58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AA404D7D1F0B22B20085DA58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AA404D7E1F0B22B20085DA58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AA404D811F0B22B20085DA58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA404D831F0B22B20085DA58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA404D881F0B22B20085DA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA404D8E1F0C43130085DA58 /* BookSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchTableViewController.h; sourceTree = "<group>"; };
+		AA404D8F1F0C43130085DA58 /* BookSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchTableViewController.m; sourceTree = "<group>"; };
+		AA404D911F0C43A60085DA58 /* BookSearchTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchTableCell.h; sourceTree = "<group>"; };
+		AA404D921F0C43A60085DA58 /* BookSearchTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchTableCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA404D711F0B22B20085DA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA404D6B1F0B22B20085DA58 = {
+			isa = PBXGroup;
+			children = (
+				AA404D761F0B22B20085DA58 /* WeHaLib */,
+				AA404D751F0B22B20085DA58 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA404D751F0B22B20085DA58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA404D741F0B22B20085DA58 /* WeHaLib.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA404D761F0B22B20085DA58 /* WeHaLib */ = {
+			isa = PBXGroup;
+			children = (
+				AA404D7A1F0B22B20085DA58 /* AppDelegate.h */,
+				AA404D7B1F0B22B20085DA58 /* AppDelegate.m */,
+				AA404D7D1F0B22B20085DA58 /* ViewController.h */,
+				AA404D7E1F0B22B20085DA58 /* ViewController.m */,
+				AA404D801F0B22B20085DA58 /* Main.storyboard */,
+				AA404D831F0B22B20085DA58 /* Assets.xcassets */,
+				AA404D881F0B22B20085DA58 /* Info.plist */,
+				AA404D771F0B22B20085DA58 /* Supporting Files */,
+				AA404D8E1F0C43130085DA58 /* BookSearchTableViewController.h */,
+				AA404D8F1F0C43130085DA58 /* BookSearchTableViewController.m */,
+				AA404D911F0C43A60085DA58 /* BookSearchTableCell.h */,
+				AA404D921F0C43A60085DA58 /* BookSearchTableCell.m */,
+			);
+			path = WeHaLib;
+			sourceTree = "<group>";
+		};
+		AA404D771F0B22B20085DA58 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA404D781F0B22B20085DA58 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA404D731F0B22B20085DA58 /* WeHaLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA404D8B1F0B22B20085DA58 /* Build configuration list for PBXNativeTarget "WeHaLib" */;
+			buildPhases = (
+				AA404D701F0B22B20085DA58 /* Sources */,
+				AA404D711F0B22B20085DA58 /* Frameworks */,
+				AA404D721F0B22B20085DA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeHaLib;
+			productName = WeHaLib;
+			productReference = AA404D741F0B22B20085DA58 /* WeHaLib.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA404D6C1F0B22B20085DA58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Eric Zeiberg";
+				TargetAttributes = {
+					AA404D731F0B22B20085DA58 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BG885KQFTZ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AA404D6F1F0B22B20085DA58 /* Build configuration list for PBXProject "WeHaLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA404D6B1F0B22B20085DA58;
+			productRefGroup = AA404D751F0B22B20085DA58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA404D731F0B22B20085DA58 /* WeHaLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA404D721F0B22B20085DA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA404D841F0B22B20085DA58 /* Assets.xcassets in Resources */,
+				AA404D821F0B22B20085DA58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA404D701F0B22B20085DA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA404D931F0C43A60085DA58 /* BookSearchTableCell.m in Sources */,
+				AA404D7F1F0B22B20085DA58 /* ViewController.m in Sources */,
+				AA404D7C1F0B22B20085DA58 /* AppDelegate.m in Sources */,
+				AA404D901F0C43130085DA58 /* BookSearchTableViewController.m in Sources */,
+				AA404D791F0B22B20085DA58 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AA404D801F0B22B20085DA58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA404D811F0B22B20085DA58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA404D891F0B22B20085DA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA404D8A1F0B22B20085DA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA404D8C1F0B22B20085DA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				DEVELOPMENT_TEAM = BG885KQFTZ;
+				INFOPLIST_FILE = WeHaLib/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.westhartfordpubliclibrary.WeHaLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AA404D8D1F0B22B20085DA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				DEVELOPMENT_TEAM = BG885KQFTZ;
+				INFOPLIST_FILE = WeHaLib/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.westhartfordpubliclibrary.WeHaLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA404D6F1F0B22B20085DA58 /* Build configuration list for PBXProject "WeHaLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA404D891F0B22B20085DA58 /* Debug */,
+				AA404D8A1F0B22B20085DA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA404D8B1F0B22B20085DA58 /* Build configuration list for PBXNativeTarget "WeHaLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA404D8C1F0B22B20085DA58 /* Debug */,
+				AA404D8D1F0B22B20085DA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA404D6C1F0B22B20085DA58 /* Project object */;
+}
