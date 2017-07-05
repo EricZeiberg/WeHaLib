@@ -10,4 +10,7 @@
 
 @interface BookSearchTableViewController : UITableViewController
 
+@property (nonatomic) NSString *searchQuery;
+@property (nonatomic) NSMutableArray *searchResults;
+
 @end

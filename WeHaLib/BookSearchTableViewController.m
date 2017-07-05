@@ -8,6 +8,8 @@
 
 #import "BookSearchTableViewController.h"
 #import "BookSearchTableCell.h"
+#import "WebHelper.h"
+#import "BookSearchModel.h"
 
 @interface BookSearchTableViewController ()
 
@@ -23,6 +25,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    _searchResults = [WebHelper searchBooks:_searchQuery];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,8 +49,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BookSearchTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bookSearchCell" forIndexPath:indexPath];
     
-    cell.titleLabel.text = @"Test Title";
-    cell.authorLabel.text = @"Test Author";
+    BookSearchModel *model = [_searchResults objectAtIndex:indexPath.row];
+    
+    cell.titleLabel.text = model.title;
+    cell.authorLabel.text = model.author;
     
     cell.bookImage.contentMode = UIViewContentModeScaleAspectFit;
     cell.bookImage.clipsToBounds = YES;

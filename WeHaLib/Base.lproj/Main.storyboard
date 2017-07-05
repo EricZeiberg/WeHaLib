@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="1978.4000000000001" y="115.59220389805098"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Search View Controller-->
         <scene sceneID="LOY-uK-DNC">
             <objects>
-                <viewController id="beZ-k1-VBG" sceneMemberID="viewController">
+                <viewController id="beZ-k1-VBG" customClass="BookSearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FiK-vV-n4e"/>
                         <viewControllerLayoutGuide type="bottom" id="EJU-bl-zBZ"/>
@@ -151,7 +151,8 @@
                                         <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="20"/>
                                         <state key="normal" title="SEARCH" backgroundImage="rectButton"/>
                                         <connections>
-                                            <segue destination="8TK-0Y-HHV" kind="push" id="4qn-qQ-FFq"/>
+                                            <action selector="searchButtonAction:" destination="beZ-k1-VBG" eventType="touchUpInside" id="Nii-lo-Eue"/>
+                                            <segue destination="8TK-0Y-HHV" kind="push" identifier="searchTableViewController" id="4qn-qQ-FFq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -191,6 +192,9 @@
                             </view>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchTextField" destination="F6c-Sq-eJp" id="PDo-zG-raH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qm0-Zs-gQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,4 +10,8 @@
 
 @implementation BookSearchModel
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"BookSearchModel: %@, %@, %@, %@", _title, _author, _bookID, _imageURL];
+}
 @end
