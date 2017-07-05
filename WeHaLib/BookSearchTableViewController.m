@@ -47,7 +47,12 @@
     cell.titleLabel.text = @"Test Title";
     cell.authorLabel.text = @"Test Author";
     
-    [cell.imageView setImage:[UIImage imageNamed:@"magpie murders.png"]];
+    cell.bookImage.contentMode = UIViewContentModeScaleAspectFit;
+    cell.bookImage.clipsToBounds = YES;
+    
+    [cell.bookImage setImage:[UIImage imageNamed:@"magpie murders.png"]];
+    
+    
     
     return cell;
 }

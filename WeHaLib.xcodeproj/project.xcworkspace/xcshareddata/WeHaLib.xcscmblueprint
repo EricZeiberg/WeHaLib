@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7EB14AB57725D76A2FA8F7F1F958D0966F63A94B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1F90DED7372F37DC9A816EC66E6E97659683D215" : 9223372036854775807,
+    "7EB14AB57725D76A2FA8F7F1F958D0966F63A94B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9A0423B2-D214-4310-9AAF-B15D2548DA3D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1F90DED7372F37DC9A816EC66E6E97659683D215" : "..",
+    "7EB14AB57725D76A2FA8F7F1F958D0966F63A94B" : "WeHaLib\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WeHaLib",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WeHaLib.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EricZeiberg\/BasketballCrawler.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1F90DED7372F37DC9A816EC66E6E97659683D215"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EricZeiberg\/WeHaLib.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7EB14AB57725D76A2FA8F7F1F958D0966F63A94B"
+    }
+  ]
+}

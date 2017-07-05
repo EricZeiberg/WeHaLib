@@ -270,7 +270,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="authorLabel" destination="ldc-lc-heR" id="jnf-UO-9mi"/>
-                                    <outlet property="bookImage" destination="AIf-ET-0qH" id="hED-gn-1XW"/>
+                                    <outlet property="bookImage" destination="AIf-ET-0qH" id="XZW-UV-Q5n"/>
                                     <outlet property="infoButton" destination="NWo-J7-3zd" id="ItR-I0-eaA"/>
                                     <outlet property="titleLabel" destination="qsp-10-aov" id="noU-B1-MOf"/>
                                 </connections>

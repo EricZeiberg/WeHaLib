@@ -1,0 +1,17 @@
+PODS:
+  - hpple (0.2.0)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+
+DEPENDENCIES:
+  - hpple
+  - SDWebImage (~> 3.5)
+
+SPEC CHECKSUMS:
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+
+PODFILE CHECKSUM: 26eeab5ce2502aa575222ac37ea94699d21262e9
+
+COCOAPODS: 1.2.1

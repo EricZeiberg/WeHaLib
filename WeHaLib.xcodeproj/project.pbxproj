@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8E2171AC09782BE5F0B55E1 /* libPods-WeHaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9D21DE3A8DE085E437B18 /* libPods-WeHaLib.a */; };
 		AA404D791F0B22B20085DA58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D781F0B22B20085DA58 /* main.m */; };
 		AA404D7C1F0B22B20085DA58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D7B1F0B22B20085DA58 /* AppDelegate.m */; };
 		AA404D7F1F0B22B20085DA58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D7E1F0B22B20085DA58 /* ViewController.m */; };
@@ -14,9 +15,13 @@
 		AA404D841F0B22B20085DA58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA404D831F0B22B20085DA58 /* Assets.xcassets */; };
 		AA404D901F0C43130085DA58 /* BookSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D8F1F0C43130085DA58 /* BookSearchTableViewController.m */; };
 		AA404D931F0C43A60085DA58 /* BookSearchTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D921F0C43A60085DA58 /* BookSearchTableCell.m */; };
+		AA404D9A1F0D62BE0085DA58 /* BookSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D991F0D62BE0085DA58 /* BookSearchModel.m */; };
+		AA404D9D1F0D63310085DA58 /* WebHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D9C1F0D63310085DA58 /* WebHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047053767987480594D27A5C /* Pods-WeHaLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeHaLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeHaLib/Pods-WeHaLib.release.xcconfig"; sourceTree = "<group>"; };
+		6BC9D21DE3A8DE085E437B18 /* libPods-WeHaLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeHaLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA404D741F0B22B20085DA58 /* WeHaLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeHaLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA404D781F0B22B20085DA58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA404D7A1F0B22B20085DA58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,6 +35,11 @@
 		AA404D8F1F0C43130085DA58 /* BookSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchTableViewController.m; sourceTree = "<group>"; };
 		AA404D911F0C43A60085DA58 /* BookSearchTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchTableCell.h; sourceTree = "<group>"; };
 		AA404D921F0C43A60085DA58 /* BookSearchTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchTableCell.m; sourceTree = "<group>"; };
+		AA404D981F0D62BE0085DA58 /* BookSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchModel.h; sourceTree = "<group>"; };
+		AA404D991F0D62BE0085DA58 /* BookSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchModel.m; sourceTree = "<group>"; };
+		AA404D9B1F0D63310085DA58 /* WebHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebHelper.h; sourceTree = "<group>"; };
+		AA404D9C1F0D63310085DA58 /* WebHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebHelper.m; sourceTree = "<group>"; };
+		CE99C8BFB6E451B841B8B4EB /* Pods-WeHaLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeHaLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeHaLib/Pods-WeHaLib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E2171AC09782BE5F0B55E1 /* libPods-WeHaLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		156EFDDD0ABCDADF1DDA24E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BC9D21DE3A8DE085E437B18 /* libPods-WeHaLib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EFB636405C1564FA01FD65C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE99C8BFB6E451B841B8B4EB /* Pods-WeHaLib.debug.xcconfig */,
+				047053767987480594D27A5C /* Pods-WeHaLib.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AA404D6B1F0B22B20085DA58 = {
 			isa = PBXGroup;
 			children = (
 				AA404D761F0B22B20085DA58 /* WeHaLib */,
 				AA404D751F0B22B20085DA58 /* Products */,
+				5EFB636405C1564FA01FD65C /* Pods */,
+				156EFDDD0ABCDADF1DDA24E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +92,7 @@
 		AA404D761F0B22B20085DA58 /* WeHaLib */ = {
 			isa = PBXGroup;
 			children = (
+				AA404D941F0D618F0085DA58 /* Models */,
 				AA404D7A1F0B22B20085DA58 /* AppDelegate.h */,
 				AA404D7B1F0B22B20085DA58 /* AppDelegate.m */,
 				AA404D7D1F0B22B20085DA58 /* ViewController.h */,
@@ -74,6 +105,8 @@
 				AA404D8F1F0C43130085DA58 /* BookSearchTableViewController.m */,
 				AA404D911F0C43A60085DA58 /* BookSearchTableCell.h */,
 				AA404D921F0C43A60085DA58 /* BookSearchTableCell.m */,
+				AA404D9B1F0D63310085DA58 /* WebHelper.h */,
+				AA404D9C1F0D63310085DA58 /* WebHelper.m */,
 			);
 			path = WeHaLib;
 			sourceTree = "<group>";
@@ -86,6 +119,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AA404D941F0D618F0085DA58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA404D981F0D62BE0085DA58 /* BookSearchModel.h */,
+				AA404D991F0D62BE0085DA58 /* BookSearchModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA404D8B1F0B22B20085DA58 /* Build configuration list for PBXNativeTarget "WeHaLib" */;
 			buildPhases = (
+				737EC5AFCA6B360494E0C75E /* [CP] Check Pods Manifest.lock */,
 				AA404D701F0B22B20085DA58 /* Sources */,
 				AA404D711F0B22B20085DA58 /* Frameworks */,
 				AA404D721F0B22B20085DA58 /* Resources */,
+				19E029AF8308EBF9313BB507 /* [CP] Embed Pods Frameworks */,
+				F306FE254280AC9D3C3C0A1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,16 +197,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19E029AF8308EBF9313BB507 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeHaLib/Pods-WeHaLib-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		737EC5AFCA6B360494E0C75E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F306FE254280AC9D3C3C0A1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeHaLib/Pods-WeHaLib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA404D701F0B22B20085DA58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA404D9A1F0D62BE0085DA58 /* BookSearchModel.m in Sources */,
 				AA404D931F0C43A60085DA58 /* BookSearchTableCell.m in Sources */,
 				AA404D7F1F0B22B20085DA58 /* ViewController.m in Sources */,
 				AA404D7C1F0B22B20085DA58 /* AppDelegate.m in Sources */,
 				AA404D901F0C43130085DA58 /* BookSearchTableViewController.m in Sources */,
 				AA404D791F0B22B20085DA58 /* main.m in Sources */,
+				AA404D9D1F0D63310085DA58 /* WebHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +368,7 @@
 		};
 		AA404D8C1F0B22B20085DA58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE99C8BFB6E451B841B8B4EB /* Pods-WeHaLib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				DEVELOPMENT_TEAM = BG885KQFTZ;
@@ -285,6 +381,7 @@
 		};
 		AA404D8D1F0B22B20085DA58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 047053767987480594D27A5C /* Pods-WeHaLib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				DEVELOPMENT_TEAM = BG885KQFTZ;
@@ -314,6 +411,7 @@
 				AA404D8D1F0B22B20085DA58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
