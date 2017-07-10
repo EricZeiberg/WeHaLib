@@ -82,7 +82,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-4I-gdA">
-                                <rect key="frame" x="75" y="213" width="87" height="57"/>
+                                <rect key="frame" x="58" y="194" width="94" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="beZ-k1-VBG" kind="push" id="AAu-qE-g8R"/>
@@ -163,7 +163,7 @@
                                         <state key="normal" title="SEARCH" backgroundImage="rectButton"/>
                                         <connections>
                                             <action selector="searchButtonAction:" destination="beZ-k1-VBG" eventType="touchUpInside" id="Nii-lo-Eue"/>
-                                            <segue destination="KZ3-uE-yv0" kind="push" id="izO-C7-O2K"/>
+                                            <segue destination="KZ3-uE-yv0" kind="push" identifier="searchTableViewController" id="izO-C7-O2K"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -189,6 +189,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRd-Wb-XAM">
+                                        <rect key="frame" x="321" y="11" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Arrow"/>
+                                        <connections>
+                                            <segue destination="2W8-Lc-sqS" kind="unwind" unwindAction="unwind:" id="cZx-aH-Yco"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -219,113 +227,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qm0-Zs-gQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2W8-Lc-sqS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2741.5999999999999" y="123.68815592203899"/>
-        </scene>
-        <!--Book Search Table View Controller-->
-        <scene sceneID="umN-nl-XZ7">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gdA-2g-oig" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="8TK-0Y-HHV" customClass="BookSearchTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" id="nRP-8R-qhW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="0.94502562280000002" green="0.94513875250000001" blue="0.94498705859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookSearchCell" rowHeight="172" id="KUL-u5-TbO" customClass="BookSearchTableCell">
-                                <rect key="frame" x="0.0" y="28" width="375" height="172"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KUL-u5-TbO" id="9YL-5f-w4O">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-nD-8r7">
-                                            <rect key="frame" x="8" y="15" width="359" height="149"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n62-77-hch">
-                                                    <rect key="frame" x="8" y="68" width="135" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="19"/>
-                                                    <color key="textColor" red="0.96791487929999998" green="0.53124850990000005" blue="0.0047228778709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-lc-heR">
-                                                    <rect key="frame" x="8" y="89" width="257" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="rwZ-2X-Kq1">
-                                                    <rect key="frame" x="8" y="120" width="343" height="3"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xt7-Uu-tJ2">
-                                                    <rect key="frame" x="8" y="16" width="135" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="19"/>
-                                                    <color key="textColor" red="0.967914879322052" green="0.53124850988388062" blue="0.0047228778712451458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsp-10-aov">
-                                                    <rect key="frame" x="8" y="37" width="257" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWo-J7-3zd">
-                                                    <rect key="frame" x="94" y="128" width="171" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="17"/>
-                                                    <state key="normal" title="More Info" backgroundImage="rectButton"/>
-                                                    <connections>
-                                                        <action selector="infoButtonAction:" destination="KUL-u5-TbO" eventType="touchUpInside" id="H7G-Lp-9b6"/>
-                                                    </connections>
-                                                </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIf-ET-0qH">
-                                                    <rect key="frame" x="280" y="8" width="71" height="104"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.94502562284469604" green="0.94513875246047974" blue="0.94498705863952637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="authorLabel" destination="ldc-lc-heR" id="jnf-UO-9mi"/>
-                                    <outlet property="bookImage" destination="AIf-ET-0qH" id="XZW-UV-Q5n"/>
-                                    <outlet property="infoButton" destination="NWo-J7-3zd" id="ItR-I0-eaA"/>
-                                    <outlet property="titleLabel" destination="qsp-10-aov" id="noU-B1-MOf"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8TK-0Y-HHV" id="SLb-HI-pMR"/>
-                            <outlet property="delegate" destination="8TK-0Y-HHV" id="d0k-hE-oS5"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="fi8-nM-7Ow">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="oed-s8-Iev">
-                            <view key="customView" contentMode="scaleToFill" id="dCr-ej-aDp">
-                                <rect key="frame" x="16" y="5" width="83" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Navbar" translatesAutoresizingMaskIntoConstraints="NO" id="Kkx-Ph-GT4">
-                                        <rect key="frame" x="-16" y="-7" width="376" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="3500" y="132.68365817091455"/>
         </scene>
         <!--Book Search Table View Controller-->
         <scene sceneID="cdb-sS-HXn">
@@ -424,6 +328,14 @@
                                 <rect key="frame" x="0.0" y="17" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77o-C9-bxd">
+                                <rect key="frame" x="323" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Arrow"/>
+                                <connections>
+                                    <segue destination="OLU-xU-9nb" kind="unwind" unwindAction="unwind:" id="6md-cD-3bD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -433,8 +345,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQB-5s-5wN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OLU-xU-9nb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4256.8000000000002" y="134.48275862068968"/>
+            <point key="canvasLocation" x="3545" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xAg-cQ-VV7">
@@ -460,6 +373,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow" width="25" height="25"/>
         <image name="Navbar" width="1080" height="145"/>
         <image name="Rounded Rectangle 1" width="514" height="522"/>
         <image name="WHL-Logo-1" width="132" height="149"/>
