@@ -10,6 +10,8 @@
 #import "BookSearchTableCell.h"
 #import "WebHelper.h"
 #import "BookSearchModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface BookSearchTableViewController ()
 
@@ -26,6 +28,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    
+   
     _searchResults = [WebHelper searchBooks:_searchQuery];
     [self.tableView reloadData];
 }
@@ -42,7 +46,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return [_searchResults count];
 }
 
 
@@ -51,13 +55,20 @@
     
     BookSearchModel *model = [_searchResults objectAtIndex:indexPath.row];
     
+    cell.titleLabel.adjustsFontSizeToFitWidth = YES;
+    cell.titleLabel.minimumFontSize = 10.0;
+    
+    cell.authorLabel.adjustsFontSizeToFitWidth = YES;
+    cell.authorLabel.minimumFontSize = 10.0;
+    
     cell.titleLabel.text = model.title;
     cell.authorLabel.text = model.author;
     
     cell.bookImage.contentMode = UIViewContentModeScaleAspectFit;
     cell.bookImage.clipsToBounds = YES;
     
-    [cell.bookImage setImage:[UIImage imageNamed:@"magpie murders.png"]];
+    [cell.bookImage sd_setImageWithURL:[NSURL URLWithString:model.imageURL]
+                      placeholderImage:[UIImage imageNamed:@"magpie murders.png"]]; //TODO Get legit placeholder image
     
     
     
