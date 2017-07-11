@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WebHelper : NSObject
+@interface WebHelper : NSObject<NSURLConnectionDataDelegate>
+
+@property(nonatomic) NSURLConnection *searchBookConn;
 
 +(NSMutableArray *)searchBooks:(NSString *)searchQuery;
-
+-(void)processRequest:(NSURLRequest *)request;
 @end

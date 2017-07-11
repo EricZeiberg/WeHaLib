@@ -10,6 +10,7 @@
 #import "BookSearchTableCell.h"
 #import "WebHelper.h"
 #import "BookSearchModel.h"
+#import "TFHpple.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 
@@ -30,13 +31,21 @@
     
     
    
-    _searchResults = [WebHelper searchBooks:_searchQuery];
-    [self.tableView reloadData];
+    [self searchBooks];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)searchBooks {
+    NSURL *searchURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://lci-mt.iii.com/iii/encore/search?lang=eng&target=%@&searchImageSumbitComponent=Submit", _searchQuery]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:searchURL];
+    
+    // Create url connection and fire request
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
 #pragma mark - Table view data source
@@ -74,6 +83,77 @@
     
     return cell;
 }
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    
+    if(!self.data)
+    {
+        self.data = [NSMutableData data];
+    }
+    [self.data appendData:data];
+    
+
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSMutableArray *bookArray = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    NSData *searchHTMLData =  [NSData dataWithData:self.data];
+    
+    //printf("%s", [[[NSString alloc] initWithData:searchHTMLData encoding:NSUTF8StringEncoding] UTF8String]);
+    
+    
+    // 2
+    TFHpple *searchParser = [TFHpple hppleWithHTMLData:searchHTMLData];
+    
+    NSString *XpathQueryString = @"//div[@class='gridBrowseContent2 searchResult']/div[@class='gridBrowseCol2']";
+    NSArray *nodes = [searchParser searchWithXPathQuery:XpathQueryString];
+    
+    for (TFHppleElement *element in nodes) {
+        // 5
+        BookSearchModel *book = [[BookSearchModel alloc] init];
+        [bookArray addObject:book];
+        
+        book.bookID = [[element objectForKey:@"id"] componentsSeparatedByString:@"-"][1];
+        
+        NSString *imageURL = [[[[element firstChildWithClassName:@"itemBookCover"] firstChildWithTagName:@"a"] firstChildWithTagName:@"img"] objectForKey:@"src"];
+        book.imageURL = [NSString stringWithFormat:@"http://lci-mt.iii.com/%@", imageURL];
+        
+        NSString *title = [[[[element firstChildWithClassName:@"dpBibTitle"] firstChildWithClassName:@"title"] firstChildWithTagName:@"a"] text];
+        
+        title = [title stringByReplacingOccurrencesOfString:@"\r\n" withString:@""];
+        
+        title = [title stringByTrimmingCharactersInSet:
+                 [NSCharacterSet whitespaceCharacterSet]];
+        
+        book.title = title;
+        
+        NSString *author = [[[[element firstChildWithClassName:@"dpBibTitle" ] firstChildWithClassName:@"dpBibAuthor"] firstChildWithTagName:@"a"]  text];
+        
+        author = [author stringByReplacingOccurrencesOfString:@"\r\n" withString:@""];
+        
+        author = [author stringByTrimmingCharactersInSet:
+                  [NSCharacterSet whitespaceCharacterSet]];
+        
+        book.author = author;
+        
+        NSLog(@"%@", book);
+        
+        
+    }
+    
+    
+    _searchResults = bookArray;
+
+    [self.tableView reloadData];
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    // The request has failed for some reason!
+    // Check the error var
+}
+
 
 
 

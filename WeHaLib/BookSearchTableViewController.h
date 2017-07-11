@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BookSearchTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface BookSearchTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate>
 
 @property (nonatomic) NSString *searchQuery;
 @property (nonatomic) NSMutableArray *searchResults;
+@property (nonatomic,readwrite,strong) NSMutableData *data;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+-(void)searchBooks;
 @end
