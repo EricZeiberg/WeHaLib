@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomIOSAlertView.h"
 
 @interface BookSearchTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate>
 
@@ -14,6 +15,7 @@
 @property (nonatomic) NSMutableArray *searchResults;
 @property (nonatomic,readwrite,strong) NSMutableData *data;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) CustomIOSAlertView *alertView;
 
 -(void)searchBooks;
 @end

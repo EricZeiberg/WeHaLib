@@ -18,6 +18,7 @@
 		AA404D9A1F0D62BE0085DA58 /* BookSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D991F0D62BE0085DA58 /* BookSearchModel.m */; };
 		AA404D9D1F0D63310085DA58 /* WebHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D9C1F0D63310085DA58 /* WebHelper.m */; };
 		AA404DA01F0DA6270085DA58 /* BookSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D9F1F0DA6270085DA58 /* BookSearchViewController.m */; };
+		AA404DA31F1555380085DA58 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404DA21F1555380085DA58 /* AlertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		AA404D9C1F0D63310085DA58 /* WebHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebHelper.m; sourceTree = "<group>"; };
 		AA404D9E1F0DA6270085DA58 /* BookSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchViewController.h; sourceTree = "<group>"; };
 		AA404D9F1F0DA6270085DA58 /* BookSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchViewController.m; sourceTree = "<group>"; };
+		AA404DA11F1555380085DA58 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		AA404DA21F1555380085DA58 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		CE99C8BFB6E451B841B8B4EB /* Pods-WeHaLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeHaLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeHaLib/Pods-WeHaLib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +115,8 @@
 				AA404D9C1F0D63310085DA58 /* WebHelper.m */,
 				AA404D9E1F0DA6270085DA58 /* BookSearchViewController.h */,
 				AA404D9F1F0DA6270085DA58 /* BookSearchViewController.m */,
+				AA404DA11F1555380085DA58 /* AlertViewController.h */,
+				AA404DA21F1555380085DA58 /* AlertViewController.m */,
 			);
 			path = WeHaLib;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 			files = (
 				AA404D9A1F0D62BE0085DA58 /* BookSearchModel.m in Sources */,
 				AA404D931F0C43A60085DA58 /* BookSearchTableCell.m in Sources */,
+				AA404DA31F1555380085DA58 /* AlertViewController.m in Sources */,
 				AA404D7F1F0B22B20085DA58 /* ViewController.m in Sources */,
 				AA404D7C1F0B22B20085DA58 /* AppDelegate.m in Sources */,
 				AA404D901F0C43130085DA58 /* BookSearchTableViewController.m in Sources */,

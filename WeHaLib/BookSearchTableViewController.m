@@ -12,7 +12,8 @@
 #import "BookSearchModel.h"
 #import "TFHpple.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import "CustomIOSAlertView.h"
+#import "AlertViewController.h"
 
 @interface BookSearchTableViewController ()
 
@@ -30,7 +31,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-   
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    AlertViewController *sfvc = [storyboard instantiateViewControllerWithIdentifier:@"AlertViewController"];
+    sfvc.view.backgroundColor = [UIColor clearColor];
+    sfvc.message.text = @"Searching Books...";
+    [sfvc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [self presentViewController:sfvc animated:YES completion:NULL];
+
     [self searchBooks];
     
 }
@@ -146,6 +153,7 @@
     _searchResults = bookArray;
 
     [self.tableView reloadData];
+    [self dismissViewControllerAnimated:YES completion:NULL];
     
 }
 
