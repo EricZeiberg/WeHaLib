@@ -30,7 +30,9 @@
 //        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
 //        BookSearchTableViewController *controller = (BookSearchTableViewController *)navController.topViewController;
         BookSearchTableViewController *controller = (BookSearchTableViewController *)segue.destinationViewController;
-        controller.searchQuery = _searchTextField.text;
+        NSString *searchQuery = _searchTextField.text;
+        searchQuery = [searchQuery stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        controller.searchQuery = searchQuery;
     }
 }
 

@@ -113,15 +113,15 @@
     // 2
     TFHpple *searchParser = [TFHpple hppleWithHTMLData:searchHTMLData];
     
-    NSString *XpathQueryString = @"//div[@class='gridBrowseContent2 searchResult']/div[@class='gridBrowseCol2']";
+    NSString *XpathQueryString = @"//div[@class='gridBrowseContent2 searchResult']";
     NSArray *nodes = [searchParser searchWithXPathQuery:XpathQueryString];
     
-    for (TFHppleElement *element in nodes) {
+    for (TFHppleElement *node in nodes) {
+        
+        TFHppleElement *element = [node firstChildWithClassName:@"gridBrowseCol2"];
         // 5
         BookSearchModel *book = [[BookSearchModel alloc] init];
         [bookArray addObject:book];
-        
-        book.bookID = [[element objectForKey:@"id"] componentsSeparatedByString:@"-"][1];
         
         NSString *imageURL = [[[[element firstChildWithClassName:@"itemBookCover"] firstChildWithTagName:@"a"] firstChildWithTagName:@"img"] objectForKey:@"src"];
         book.imageURL = [NSString stringWithFormat:@"http://lci-mt.iii.com/%@", imageURL];
@@ -143,6 +143,10 @@
                   [NSCharacterSet whitespaceCharacterSet]];
         
         book.author = author;
+        
+        NSString *bookID = [[node objectForKey:@"id"] substringFromIndex:13];
+        
+        book.bookID = bookID;
         
         NSLog(@"%@", book);
         
