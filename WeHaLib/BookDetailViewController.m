@@ -67,10 +67,15 @@
     // 2
     TFHpple *searchParser = [TFHpple hppleWithHTMLData:searchHTMLData];
     
-    NSString *XpathQueryString = @"//td[@class='bibInfoData']";
+    NSString *XpathQueryString = @"//table[@id='bibInfoDetails']/tbody/tr";
     NSArray *nodes = [searchParser searchWithXPathQuery:XpathQueryString];
-
-    NSString *summary = [ nodes[5] firstChildWithClassName:@"recordDetailValue"].text;
+    
+    NSString *summary = @"NULL";
+        for (TFHppleElement *node in nodes) {
+            if ([[node firstChildWithClassName:@"bibInfoLabel"].text containsString:@"Summary"]) {
+                summary = [[node firstChildWithClassName:@"bibInfoData"] firstChildWithClassName:@"recordDetailValue"].text;
+            }
+        }
     
     
     summary = [summary stringByReplacingOccurrencesOfString:@"\r\n" withString:@""];
@@ -82,9 +87,7 @@
     
     [self.bookImageView sd_setImageWithURL:[NSURL URLWithString:_bookImageURL]
                       placeholderImage:[UIImage imageNamed:@"magpie murders.png"]]; //TODO Get legit placeholder image
-//    for (TFHppleElement *node in nodes) {
-//        
-//    }
+
     self.titleLabel.text = _titleString;
     self.authorLabel.text = _authorString;
     
