@@ -8,12 +8,11 @@
 
 #import "BookSearchTableViewController.h"
 #import "BookSearchTableCell.h"
-#import "WebHelper.h"
 #import "BookSearchModel.h"
 #import "TFHpple.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "CustomIOSAlertView.h"
 #import "AlertViewController.h"
+#import "BookDetailViewController.h"
 
 @interface BookSearchTableViewController ()
 
@@ -165,6 +164,31 @@
     // The request has failed for some reason!
     // Check the error var
 }
+
+- (IBAction)unwind:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"detailViewController"]){
+        //        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        //        BookSearchTableViewController *controller = (BookSearchTableViewController *)navController.topViewController;
+        BookDetailViewController *controller = (BookDetailViewController *)segue.destinationViewController;
+        BookSearchModel *model = [_searchResults objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+        controller.titleString = model.title;
+        controller.authorString = model.author;
+        controller.bookID = model.bookID;
+        controller.bookImageURL = model.imageURL;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [self performSegueWithIdentifier:@"detailViewController" sender:tableView];
+}
+
 
 
 
