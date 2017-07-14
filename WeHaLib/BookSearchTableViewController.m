@@ -35,9 +35,10 @@
     sfvc.view.backgroundColor = [UIColor clearColor];
     sfvc.message.text = @"Searching Books...";
     [sfvc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-    [self presentViewController:sfvc animated:YES completion:NULL];
-
-    [self searchBooks];
+    [self presentViewController:sfvc animated:YES completion:^{
+        [self searchBooks];
+        
+    }];
     
 }
 

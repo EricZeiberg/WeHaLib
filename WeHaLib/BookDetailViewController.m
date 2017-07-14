@@ -25,9 +25,14 @@
     sfvc.view.backgroundColor = [UIColor clearColor];
     sfvc.message.text = @"Access book details...";
     [sfvc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-    [self presentViewController:sfvc animated:YES completion:NULL];
+    [self presentViewController:sfvc animated:YES completion:^{
+        [self grabData];
     
-    [self grabData];
+    }];
+    
+    
+    
+    
 
 }
 
@@ -61,7 +66,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSData *searchHTMLData =  [NSData dataWithData:self.data];
     
-    printf("%s", [[[NSString alloc] initWithData:searchHTMLData encoding:NSUTF8StringEncoding] UTF8String]);
+   // printf("%s", [[[NSString alloc] initWithData:searchHTMLData encoding:NSUTF8StringEncoding] UTF8String]);
     
     
     // 2
@@ -88,10 +93,12 @@
     [self.bookImageView sd_setImageWithURL:[NSURL URLWithString:_bookImageURL]
                       placeholderImage:[UIImage imageNamed:@"magpie murders.png"]]; //TODO Get legit placeholder image
 
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.titleLabel.text = _titleString;
+    self.authorLabel.adjustsFontSizeToFitWidth = YES;
     self.authorLabel.text = _authorString;
     
-    [self dismissViewControllerAnimated:YES completion:NULL];
+   [self dismissViewControllerAnimated:YES completion:NULL];
 
 }
 
