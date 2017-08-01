@@ -23,7 +23,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     AlertViewController *sfvc = [storyboard instantiateViewControllerWithIdentifier:@"AlertViewController"];
     sfvc.view.backgroundColor = [UIColor clearColor];
-    sfvc.message.text = @"Access book details...";
+    sfvc.message.text = @"Accessing book details...";
     [sfvc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     [self presentViewController:sfvc animated:YES completion:^{
         [self grabData];
@@ -66,7 +66,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSData *searchHTMLData =  [NSData dataWithData:self.data];
     
-   // printf("%s", [[[NSString alloc] initWithData:searchHTMLData encoding:NSUTF8StringEncoding] UTF8String]);
+  //  printf("%s", [[[NSString alloc] initWithData:searchHTMLData encoding:NSUTF8StringEncoding] UTF8String]);
     
     
     // 2
@@ -81,6 +81,29 @@
                 summary = [[node firstChildWithClassName:@"bibInfoData"] firstChildWithClassName:@"recordDetailValue"].text;
             }
         }
+    
+    XpathQueryString = [NSString stringWithFormat:@"//div[@id='allitems-%@']", _bookID];
+    NSArray *element = nil;
+    element = [searchParser searchWithXPathQuery:XpathQueryString];
+    if ([element count] == 0) {
+        XpathQueryString = [NSString stringWithFormat:@"//div[@id='allavailitems-%@']", _bookID];
+        element = [searchParser searchWithXPathQuery:XpathQueryString];
+
+    }
+    nodes = [[[element[0] firstChildWithTagName:@"div"] firstChildWithTagName:@"table"] children];
+    
+    BOOL isAvailable = NO;
+    for (int i = 3; i < [nodes count]; i+=2) {
+        TFHppleElement *node = [nodes objectAtIndex:i];
+        TFHppleElement *tdNode = [[node firstChildWithTagName:@"td"] firstChildWithTagName:@"a"];
+        if ([tdNode.text containsString:@"West Hartford"]) {
+            NSString *availability = [[node childrenWithTagName:@"td"][2] text];
+            if ([availability containsString:@"Check Shelf"]) {
+                isAvailable = YES;
+                break;
+            }
+        }
+    }
     
     
     summary = [summary stringByReplacingOccurrencesOfString:@"\r\n" withString:@""];
@@ -97,6 +120,11 @@
     self.titleLabel.text = _titleString;
     self.authorLabel.adjustsFontSizeToFitWidth = YES;
     self.authorLabel.text = _authorString;
+    
+    if (!isAvailable) {
+        [self.statusImageView setImage:[UIImage imageNamed:@"cancel.png"]];
+        self.statusLabel.text = @"Not Available";
+    }
     
    [self dismissViewControllerAnimated:YES completion:NULL];
 

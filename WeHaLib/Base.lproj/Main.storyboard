@@ -347,6 +347,8 @@
                     <connections>
                         <outlet property="authorLabel" destination="mza-OH-83p" id="qFC-Ql-Kbs"/>
                         <outlet property="bookImageView" destination="mLB-0b-SVo" id="WKI-J9-tbi"/>
+                        <outlet property="statusImageView" destination="FP1-bM-UDj" id="ULu-KY-aVQ"/>
+                        <outlet property="statusLabel" destination="YMn-FI-AOx" id="YQ8-IA-FhG"/>
                         <outlet property="summaryLabel" destination="lOQ-n4-haO" id="98D-Lb-9fP"/>
                         <outlet property="titleLabel" destination="cIg-VX-KdQ" id="oAO-Nw-VnV"/>
                     </connections>
