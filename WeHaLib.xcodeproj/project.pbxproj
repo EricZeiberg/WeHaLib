@@ -19,6 +19,7 @@
 		AA404DA01F0DA6270085DA58 /* BookSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404D9F1F0DA6270085DA58 /* BookSearchViewController.m */; };
 		AA404DA31F1555380085DA58 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404DA21F1555380085DA58 /* AlertViewController.m */; };
 		AA404DA61F16C3FA0085DA58 /* BookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA404DA51F16C3FA0085DA58 /* BookDetailViewController.m */; };
+		AAAF88A31F32571800E1208F /* SessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF88A21F32571800E1208F /* SessionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		AA404DA21F1555380085DA58 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		AA404DA41F16C3FA0085DA58 /* BookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailViewController.h; sourceTree = "<group>"; };
 		AA404DA51F16C3FA0085DA58 /* BookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailViewController.m; sourceTree = "<group>"; };
+		AAAF88A11F32571800E1208F /* SessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionViewController.h; sourceTree = "<group>"; };
+		AAAF88A21F32571800E1208F /* SessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionViewController.m; sourceTree = "<group>"; };
 		CE99C8BFB6E451B841B8B4EB /* Pods-WeHaLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeHaLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeHaLib/Pods-WeHaLib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,8 @@
 				AA404DA21F1555380085DA58 /* AlertViewController.m */,
 				AA404DA41F16C3FA0085DA58 /* BookDetailViewController.h */,
 				AA404DA51F16C3FA0085DA58 /* BookDetailViewController.m */,
+				AAAF88A11F32571800E1208F /* SessionViewController.h */,
+				AAAF88A21F32571800E1208F /* SessionViewController.m */,
 			);
 			path = WeHaLib;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				AA404D7C1F0B22B20085DA58 /* AppDelegate.m in Sources */,
 				AA404D901F0C43130085DA58 /* BookSearchTableViewController.m in Sources */,
 				AA404DA61F16C3FA0085DA58 /* BookDetailViewController.m in Sources */,
+				AAAF88A31F32571800E1208F /* SessionViewController.m in Sources */,
 				AA404DA01F0DA6270085DA58 /* BookSearchViewController.m in Sources */,
 				AA404D791F0B22B20085DA58 /* main.m in Sources */,
 			);
